@@ -73,3 +73,17 @@ socket.onmessage = (event) => {
   const data = JSON.parse(event.data);
   this.updateRealPosition(data);
 };
+
+//Map Settings (in initMap()):
+// Change initial position (latitude, longitude)
+this.map.setView([NEW_LAT, NEW_LNG], ZOOM_LEVEL);
+
+// Change map tiles provider
+L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png').addTo(this.map);
+
+//Car Marker:
+// Change car icon (find another PNG URL)
+iconUrl: 'https://example.com/new-car-icon.png'
+
+// Change marker size
+iconSize: [50, 50]  // [width, height]
