@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Car Tracking</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Live Car Tracking 🚗</h1>
+        <div id="map"></div>
+        <div class="status-container">
+            <div class="status-box">
+                <h3>Vehicle Status</h3>
+                <p>Latitude: <span id="latitude">0</span></p>
+                <p>Longitude: <span id="longitude">0</span></p>
+                <p>Speed: <span id="speed">0</span> km/h</p>
+                <p>Direction: <span id="direction">0</span>°</p>
+            </div>
+            <div class="controls">
+                <button id="startTracking">Start Tracking</button>
+                <button id="stopTracking">Stop Tracking</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
