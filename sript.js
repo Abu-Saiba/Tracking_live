@@ -67,3 +67,9 @@ class CarTracker {
 document.addEventListener('DOMContentLoaded', () => {
     new CarTracker();
 });
+  //Add Backend Integration
+  const socket = new WebSocket('wss://your-server-endpoint');
+socket.onmessage = (event) => {
+  const data = JSON.parse(event.data);
+  this.updateRealPosition(data);
+};
